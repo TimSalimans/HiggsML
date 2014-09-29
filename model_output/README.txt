@@ -1,0 +1,2 @@
+This folder holds the model output. The model predictions take over 3GB to store and many CPU days to create.
+The complete contents of this folder can be downloaded from: https://drive.google.com/file/d/0B4Zly9eEgwFsbUx5cm15UHpJZTg/edit?usp=sharing
