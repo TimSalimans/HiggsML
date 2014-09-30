@@ -41,7 +41,7 @@ The scripts run 7 fold cross validation and train a model on the complete traini
 The challenge organizers already did a great job of providing features for this competition based on what physicists are currently using. I made the following changes/additions to the provided features
 
 * Calculate the features with respect to new combinations of (pseudo)particles. For example, features like the *transverse mass* can be defined with respect to any combination of the particles in the detector, not just those for which it was calculated in the provided features.
-* Transform the *eta* and *tau* features to account for the symmetries outlined on the [competition forum](http://www.kaggle.com/c/higgs-boson/forums/t/9576/reducing-the-feature-space).
+* Transform the *eta* and *phi* features to account for the symmetries outlined on the [competition forum](http://www.kaggle.com/c/higgs-boson/forums/t/9576/reducing-the-feature-space).
 
 
 ### Prediction target
@@ -83,7 +83,7 @@ The blending model is a standard generalized linear model with exponential loss,
 * Using the test data as unlabeled data to guide the model search
 
 ### Speeding things up / reducing memory requirements
-The model settings were chosen to give optimal predictive results in an amount of time that is acceptable when you can get some cheap Amazon EC2 instances using spot pricing. If you want to run this on your laptop it would probably be a good idea to reduce the number of leaves in the RGF models (and increase the regularization). Also you may not be able to run 7 fold cross validation and final model estimation in parallel if you have <60GB of memory on your machine.
+The model settings were chosen to give optimal predictive results in an amount of time that is acceptable when you can get some cheap Amazon EC2 instances using spot pricing. If you want to run this on your laptop it would probably be a good idea to reduce the number of leaves in the RGF models (and decrease the regularization). Also you may not be able to run 7 fold cross validation and final model estimation in parallel if you have <60GB of memory on your machine.
 
 ## References
 * http://www.kaggle.com/c/higgs-boson/data "Higgs Boson Machine Learning Challenge"
